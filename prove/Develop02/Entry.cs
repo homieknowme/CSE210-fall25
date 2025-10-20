@@ -1,7 +1,7 @@
 public class Entry
 {
-        public string _prompt { get; private set; }
-        public string _entry { get; private set; }
+        public string _prompt;
+        public string _entry;
         private string _date;
         
         public Entry(string prompt, string entry)
