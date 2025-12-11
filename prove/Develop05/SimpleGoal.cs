@@ -15,7 +15,7 @@ class SimpleGoal : Goal
         _isComplete = isComplete;
     }
 
-    public override bool IsComplete() => _isComplete;
+    public override bool IsComplete() {return _isComplete;}
 
     public override int RecordEvent()
     {
@@ -27,7 +27,7 @@ class SimpleGoal : Goal
         return 0;
     }
 
-    public override string GetStatus() => _isComplete ? "[X]" : "[ ]";
+    public override string GetStatus()  {return _isComplete ? "[X]" : "[ ]";}
 
     public override string GetSaveString()
     {

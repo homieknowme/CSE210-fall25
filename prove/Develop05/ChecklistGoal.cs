@@ -23,7 +23,7 @@ class ChecklistGoal : Goal
         _currentCount = currentCount;
     }
 
-    public override bool IsComplete() => _currentCount >= _targetCount;
+    public override bool IsComplete() {return _currentCount >= _targetCount;}
 
     public override int RecordEvent()
     {
@@ -41,7 +41,7 @@ class ChecklistGoal : Goal
         return 0;
     }
 
-    public override string GetStatus() => $"[{_currentCount}/{_targetCount}]";
+    public override string GetStatus() {return $"[{_currentCount}/{_targetCount}]";}
 
     public override string GetSaveString()
     {

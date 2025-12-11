@@ -8,11 +8,11 @@ class EternalGoal : Goal
         
     }
 
-    public override bool IsComplete() => false;
+    public override bool IsComplete() {return false;}
 
-    public override int RecordEvent() => GetPoints();
+    public override int RecordEvent() {return GetPoints();}
 
-    public override string GetStatus() => "[ ]";
+    public override string GetStatus() {return "[ ]";}
 
     public override string GetSaveString()
     {
