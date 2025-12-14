@@ -33,7 +33,7 @@ public class Item
         return _weight;
     }
 
-    public int GetQuantiy()
+    public int GetQuantity()
     {
         return _quantity;
     }
@@ -83,6 +83,8 @@ public class Item
     {
         return _quantity * _value;
     }
+
+    
 
     public void Use()
     {

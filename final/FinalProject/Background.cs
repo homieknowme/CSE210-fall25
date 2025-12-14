@@ -4,19 +4,19 @@ public class Background
 {
     
     private string _name;
-    private List<string> _skillProficiencies;
-    private List<string> _toolProficiencies;
+    private List<string> _skills;
+    private List<string> _proficiencies;
     private List<string> _languages;
-    private List<string> _features;
+    private Dictionary<string, string> _features;
     private int _bonusLanguages;
 
     public Background(string name)
     {
         _name = name;
-        _skillProficiencies = new List<string>();
-        _toolProficiencies = new List<string>();
+        _skills = new List<string>();
+        _proficiencies = new List<string>();
         _languages = new List<string>();
-        _features = new List<string>();
+        _features = new Dictionary<string, string>();
     }
 
 
@@ -27,12 +27,12 @@ public class Background
 
     public List<string> GetSkills()
     {
-        return _skillProficiencies;
+        return _skills;
     }
 
-    public List<string> GetTools()
+    public List<string> GetProficiency()
     {
-        return _toolProficiencies;
+        return _proficiencies;
     }
 
     public List<string> GetLanguages()
@@ -40,19 +40,19 @@ public class Background
         return _languages;
     }
 
-    public List<string> GetFeatures()
+    public Dictionary<string, string> GetFeatures()
     {
         return _features;
     }
 
     public void AddSkill(string skill)
     {
-        _skillProficiencies.Add(skill);
+        _skills.Add(skill);
     }
 
-    public void AddTool(string tool)
+    public void AddProficiency(string tool)
     {
-        _toolProficiencies.Add(tool);
+        _proficiencies.Add(tool);
     }
 
     public void AddLanguage(string language)
@@ -60,9 +60,9 @@ public class Background
         _languages.Add(language);
     }
 
-    public void AddFeature(string feature)
+    public void AddFeature(string feature, string description)
     {
-        _features.Add(feature);
+        _features.Add(feature, description);
     }
 
     public int GetBonusLanguages()
@@ -75,10 +75,11 @@ public class Background
         _bonusLanguages = amount;
     }
 
-    public virtual void ApplyBackgroundFeatures()
+    public virtual void  ApplyBackgroundEquipment(Character character)
     {
         
     }
+
 
 
 }

@@ -7,6 +7,8 @@ public abstract class Race
     private int _speed;
     private string _size;
     private Dictionary<string, string> _traits;
+    private List<string> _skills;
+    private List<string> _proficiencies;
     private List<string> _languages;
     private int _bonusLanguages;
 
@@ -18,6 +20,8 @@ public abstract class Race
         _traits = new Dictionary<string, string>();
         _languages = new List<string>();
         _bonusLanguages = 0;
+        _skills = new List<string>();
+        _proficiencies = new List<string>();
     }
 
 
@@ -39,6 +43,26 @@ public abstract class Race
     public void SetSpeed(int speed)
     {
         _speed = speed;
+    }
+
+     public List<string> GetSkill()
+    {
+        return _skills;
+    }
+
+    public void AddSkill(string skill)
+    {
+        _skills.Add(skill);
+    }
+
+    public List<string> GetProficiency()
+    {
+        return _proficiencies;
+    }
+
+    public void AddProficiency(string proficiency)
+    {
+        _proficiencies.Add(proficiency);
     }
 
     public void AddLanguage(string language)
@@ -84,7 +108,5 @@ public abstract class Race
 
     
     public abstract void ApplyRacialTraits(AbilityScores abilities);
-
-
 
 }

@@ -15,7 +15,10 @@ public class Dwarf : Race
         "You have advantage on saving throws against poison, and you have resistance against poison damage.");
         AddTrait("Stone Cunning",
         "Whenever you make an Intelligence(History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonusto the check, instead of your normal proficiency bonus.");
-        
+        AddProficiency("Battleaxe");
+        AddProficiency("Handaxe");
+        AddProficiency("Throwing Hammer");
+        AddProficiency("Warhammer");
     }
 
     public override void ApplyRacialTraits(AbilityScores abilities)

@@ -28,6 +28,40 @@ public class AbilityScores
     public int GetCha() {return _charisma;}
     public void IncreaseCha(int amount) {_charisma += amount;}
 
+    public int GetModifier(string statName)
+    {
+        int score = 0;
+
+        switch (statName.ToLower())
+        {
+            case"str":
+                score = _strength;
+                break;
+
+            case"dex":
+                score = _dexterity;
+                break;
+
+            case"con":
+                score = _constitution;
+                break;
+
+            case"int":
+                score = _intelligence;
+                break;
+
+            case"wis":
+                score = _wisdom;
+                break;
+
+            case"cha":
+                score = _charisma;
+                break;
+        }
+
+        return (int)Math.Floor((score - 10) / 2.0);
+    }
+
 
 
 }
