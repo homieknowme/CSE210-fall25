@@ -13,16 +13,16 @@ class Goal
         _points = points;
     }
 
-    public string GetName() => _name;
+    public string GetName() {return _name;}
 
-    public string GetDescription() => _description;
-    public int GetPoints() => _points;
+    public string GetDescription() {return _description;}
+    public int GetPoints() {return _points;}
 
-    public virtual bool IsComplete() => false;
+    public virtual bool IsComplete() {return false;}
     
-    public virtual int RecordEvent() => 0;
+    public virtual int RecordEvent() {return 0;}
 
-    public virtual string GetStatus() => "[ ]";
+    public virtual string GetStatus() {return "[ ]";}
 
     public virtual string GetSaveString()
     {
